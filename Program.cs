@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace JurassicPark
 {
@@ -53,7 +54,7 @@ namespace JurassicPark
                 Name = "Bob",
                 DietType = "Herbivore",
                 Weight = 3000,
-                WhenAcquired = "COMEBACK",
+                WhenAcquired = DateTime.Now,
                 EnclosedNumber = 2,
             };
 
@@ -62,7 +63,7 @@ namespace JurassicPark
                 Name = "Rock",
                 DietType = "Carnivore",
                 Weight = 10000,
-                WhenAcquired = "COMEBACK TO THIS",
+                WhenAcquired = DateTime.Now,
                 EnclosedNumber = 3,
             };
 
@@ -72,7 +73,7 @@ namespace JurassicPark
                 Name = "Apple",
                 DietType = "Carnivore",
                 Weight = 5000,
-                WhenAcquired = ,
+                WhenAcquired = DateTime.Now,
                 EnclosedNumber = 4,
             };
 
@@ -81,15 +82,16 @@ namespace JurassicPark
             listOfDinosaurs.Add(Bob);
             listOfDinosaurs.Add(Rock);
             listOfDinosaurs.Add(Apple);
+            Console.WriteLine(listOfDinosaurs[1]);
 
             Console.WriteLine();
-            Console.WriteLine("Welcome to the zoo of Dinosaurs");
+            Console.WriteLine("Welcome to the Zoo of Dinosaurs");
             Console.WriteLine();
 
 
             var userHasQuitApp = false;
 
-            while (userHasQuitApp == false) ;
+            while (userHasQuitApp == false)
 
             {
                 Console.WriteLine("Please select an option from the following choices:");
@@ -107,10 +109,25 @@ namespace JurassicPark
                 Console.WriteLine("(Q)uit the Application.");
 
 
-                var choice = PromptForString("Choice: ");
+                var choice = PromptForString("Choice:");
 
                 if (choice == "V")
                 {
+                    Console.WriteLine("Here is a list of the current Dinosaurs at the Zoo");
+
+                    foreach (var dinosaur in listOfDinosaurs)
+                    {
+
+                        var orderDinosaursByTime = listOfDinosaurs.OrderBy(dinosaurs => dinosaurs.WhenAcquired);
+                        var description = dinosaur.Description();
+
+                        Console.WriteLine(description);
+                    }
+                }
+                if (choice == "A")
+                {
+                    var newName = PromptForString("Name: ");
+                    var
 
                 }
             }
