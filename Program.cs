@@ -149,6 +149,28 @@ namespace JurassicPark
                 {
                     userHasQuitApp = true;
                 }
+
+                if (choice == "R")
+                {
+                    var findDinosaurToRemove = PromptForString("name of Dinosaur to be removed: ");
+
+                    var dinosaurFound = listOfDinosaurs.FirstOrDefault(dinosaur => dinosaur.Name == findDinosaurToRemove);
+
+                    if (dinosaurFound == null)
+                    {
+                        Console.WriteLine($"There is no Dinosaur by the name of {dinosaurFound}");
+                    }
+
+                    else
+                    {
+                        Console.WriteLine("Would you like to remove a Dinosaur? (Y)/N");
+                        if (choice == "Y")
+                        {
+                            listOfDinosaurs.Remove(dinosaurFound);
+                        }
+                    }
+
+                }
             }
 
 
