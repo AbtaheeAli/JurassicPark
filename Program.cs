@@ -145,7 +145,10 @@ namespace JurassicPark
 
                 }
 
-
+                if (choice == "Q")
+                {
+                    userHasQuitApp = true;
+                }
             }
 
 
