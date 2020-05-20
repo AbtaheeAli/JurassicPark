@@ -124,12 +124,28 @@ namespace JurassicPark
                         Console.WriteLine(description);
                     }
                 }
+
                 if (choice == "A")
                 {
                     var newName = PromptForString("Name: ");
-                    var
+                    var newDietType = PromptForString("Diet Type: ");
+                    var newWeight = PromptForInteger("Weight: ");
+                    var newWhenAcquired = DateTime.Now;
+                    var newEnclosedNumber = PromptForInteger("Enclosed Number: ");
+
+                    var newDinosaur = new Dinosaur
+                    {
+                        Name = newName,
+                        DietType = newDietType,
+                        Weight = newWeight,
+                        WhenAcquired = newWhenAcquired,
+                        EnclosedNumber = newEnclosedNumber,
+                    };
+                    listOfDinosaurs.Add(newDinosaur);
 
                 }
+
+
             }
 
 
