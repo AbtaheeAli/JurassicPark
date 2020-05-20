@@ -1,0 +1,19 @@
+P - Problem
+    * make an app that manages the dino in ur zoo
+    * Dinosaurs list must show
+      - dietType
+      - WhenAcquired
+      - weight
+      - EnclosureNumber
+      - Name
+    * must be able to:
+      - view
+      - add
+      - transfer
+      - summary of dino
+      - quit app
+
+E - Example
+    * | Name | dietType | WhenAcquired | weight | EnclosureNumber |
+       -----   -------    ------------   ------   ---------------
+    
