@@ -152,7 +152,7 @@ namespace JurassicPark
 
                 if (choice == "R")
                 {
-                    var findDinosaurToRemove = PromptForString("name of Dinosaur to be removed: ");
+                    var findDinosaurToRemove = PromptForString("Name of Dinosaur to be removed: ");
 
                     var dinosaurFound = listOfDinosaurs.FirstOrDefault(dinosaur => dinosaur.Name == findDinosaurToRemove);
 
@@ -163,12 +163,29 @@ namespace JurassicPark
 
                     else
                     {
-                        Console.WriteLine("Would you like to remove a Dinosaur? (Y)/N");
-                        if (choice == "Y")
+                        var foundDinosaurDescription = dinosaurFound.Description();
+                        Console.WriteLine(foundDinosaurDescription);
+
+                        var doYouWantToRemoveDinosaur = PromptForString("Would you like to remove a Dinosaur? (Y/N): ");
+
+                        if (doYouWantToRemoveDinosaur == "Y")
                         {
                             listOfDinosaurs.Remove(dinosaurFound);
                         }
                     }
+
+                }
+                if (choice == "S")
+                {
+                    var typeOfDietHerb = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("herbivore"));
+                    var typeOfDietCarn = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("carnivore"));
+
+                    Console.WriteLine($"The number of carnivores is {typeOfDietCarn} and the number of herbivores is {typeOfDietHerb}");
+
+                }
+
+                if (choice == "T")
+                {
 
                 }
             }
