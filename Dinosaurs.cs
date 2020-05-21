@@ -12,11 +12,11 @@ namespace JurassicPark
 
         public int Weight { get; set; }
 
-        public int EnclosedNumber { get; set; }
+        public int EnclosureNumber { get; set; }
 
         public string Description()
         {
-            var descriptionOfDinosaurs = ($"{Name} was acquired to us around {WhenAcquired} and is located in pin {EnclosedNumber}. {Name} weighs in about {Weight} and eats {DietType}");
+            var descriptionOfDinosaurs = ($"{Name} was acquired to us around {WhenAcquired} and is located in pin {EnclosureNumber}. {Name} weighs in about {Weight} and eats {DietType}");
             return descriptionOfDinosaurs;
         }
 

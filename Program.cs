@@ -46,7 +46,7 @@ namespace JurassicPark
                 DietType = "Carnivore",
                 Weight = 1000,
                 WhenAcquired = DateTime.Now,
-                EnclosedNumber = 1,
+                EnclosureNumber = 1,
             };
 
             var Bob = new Dinosaur
@@ -55,7 +55,7 @@ namespace JurassicPark
                 DietType = "Herbivore",
                 Weight = 3000,
                 WhenAcquired = DateTime.Now,
-                EnclosedNumber = 2,
+                EnclosureNumber = 2,
             };
 
             var Rock = new Dinosaur
@@ -64,7 +64,7 @@ namespace JurassicPark
                 DietType = "Carnivore",
                 Weight = 10000,
                 WhenAcquired = DateTime.Now,
-                EnclosedNumber = 3,
+                EnclosureNumber = 3,
             };
 
             var Apple = new Dinosaur
@@ -74,7 +74,7 @@ namespace JurassicPark
                 DietType = "Carnivore",
                 Weight = 5000,
                 WhenAcquired = DateTime.Now,
-                EnclosedNumber = 4,
+                EnclosureNumber = 4,
             };
 
             var listOfDinosaurs = new List<Dinosaur>();
@@ -131,7 +131,7 @@ namespace JurassicPark
                     var newDietType = PromptForString("Diet Type: ");
                     var newWeight = PromptForInteger("Weight: ");
                     var newWhenAcquired = DateTime.Now;
-                    var newEnclosedNumber = PromptForInteger("Enclosed Number: ");
+                    var newEnclosureNumber = PromptForInteger("Enclosed Number: ");
 
                     var newDinosaur = new Dinosaur
                     {
@@ -139,7 +139,7 @@ namespace JurassicPark
                         DietType = newDietType,
                         Weight = newWeight,
                         WhenAcquired = newWhenAcquired,
-                        EnclosedNumber = newEnclosedNumber,
+                        EnclosureNumber = newEnclosureNumber,
                     };
                     listOfDinosaurs.Add(newDinosaur);
 
@@ -177,15 +177,33 @@ namespace JurassicPark
                 }
                 if (choice == "S")
                 {
-                    var typeOfDietHerb = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("herbivore"));
-                    var typeOfDietCarn = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("carnivore"));
+                    var typeOfDietHerb = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Herbivore"));
+                    var typeOfDietCarn = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Carnivore"));
 
-                    Console.WriteLine($"The number of carnivores is {typeOfDietCarn} and the number of herbivores is {typeOfDietHerb}");
+                    Console.WriteLine($"The number of carnivore is {typeOfDietCarn} and the number of herbivore is {typeOfDietHerb}");
 
                 }
 
                 if (choice == "T")
                 {
+                    var dinosaurName = PromptForString("Insert name of Dinosaur you are looking for: ");
+                    var dinosaurFound = listOfDinosaurs.FirstOrDefault(dinosaur => dinosaur.Name == dinosaurName);
+
+                    if (dinosaurFound == null)
+                    {
+                        Console.WriteLine($"There is no Dinosaur by the name of {dinosaurFound}");
+                    }
+
+                    else
+                    {
+                        var foundDinosaurDescription = dinosaurFound.Description();
+                        Console.WriteLine(foundDinosaurDescription);
+
+                        var newEnclosureNumber = PromptForInteger("New Enclosure Number: ");
+
+                        dinosaurFound.EnclosureNumber = newEnclosureNumber;
+                    }
+
 
                 }
             }
