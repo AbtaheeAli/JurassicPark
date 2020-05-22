@@ -82,7 +82,7 @@ namespace JurassicPark
             listOfDinosaurs.Add(Bob);
             listOfDinosaurs.Add(Rock);
             listOfDinosaurs.Add(Apple);
-            Console.WriteLine(listOfDinosaurs[1]);
+
 
             Console.WriteLine();
             Console.WriteLine("Welcome to the Zoo of Dinosaurs");
@@ -177,10 +177,10 @@ namespace JurassicPark
                 }
                 if (choice == "S")
                 {
-                    var typeOfDietHerb = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Herbivore"));
-                    var typeOfDietCarn = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Carnivore"));
+                    var typeOfDietHerbivore = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Herbivore"));
+                    var typeOfDietCarnivore = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Carnivore"));
 
-                    Console.WriteLine($"The number of carnivore is {typeOfDietCarn} and the number of herbivore is {typeOfDietHerb}");
+                    Console.WriteLine($"The number of carnivore is {typeOfDietCarnivore} and the number of herbivore is {typeOfDietHerbivore}");
 
                 }
 
