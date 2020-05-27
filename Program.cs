@@ -25,7 +25,6 @@ namespace JurassicPark
             {
                 return userInput;
             }
-
             else
             {
                 Console.WriteLine("Sorry, that isn't a valid input, I'm using 0 as your answer.");
@@ -149,7 +148,6 @@ namespace JurassicPark
                     {
                         Console.WriteLine($"There is no Dinosaur by the name of {dinosaurFound}");
                     }
-
                     else
                     {
                         var foundDinosaurDescription = dinosaurFound.Description();
@@ -182,7 +180,6 @@ namespace JurassicPark
                     {
                         Console.WriteLine($"There is no Dinosaur by the name of {dinosaurFound}");
                     }
-
                     else
                     {
                         var foundDinosaurDescription = dinosaurFound.Description();
