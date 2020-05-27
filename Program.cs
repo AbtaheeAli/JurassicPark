@@ -34,13 +34,6 @@ namespace JurassicPark
         }
         static void Main(string[] args)
         {
-            //          | Name    | dietType | weight | WhenAcquired | EnclosureNumber | 
-            // | ------- | -------- | ------ | ------------ | --------------- | 
-            // | Ally    |carnivore | 2000  |              | 1               |
-            // | Bob     |herbivore | 3000  |              | 2               | 
-            // | Rock    |carnivore | 10000 |              | 3               | 
-            // | Apple   |carnivore  | 5000 |              | 4               | 
-
             var Ally = new Dinosaur
             {
                 Name = "Ally",
@@ -69,7 +62,6 @@ namespace JurassicPark
             };
 
             var Apple = new Dinosaur
-
             {
                 Name = "Apple",
                 DietType = "Carnivore",
