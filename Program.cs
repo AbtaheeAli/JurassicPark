@@ -25,6 +25,7 @@ namespace JurassicPark
             {
                 return userInput;
             }
+
             else
             {
                 Console.WriteLine("Sorry, that isn't a valid input, I'm using 0 as your answer.");
@@ -83,16 +84,13 @@ namespace JurassicPark
             listOfDinosaurs.Add(Rock);
             listOfDinosaurs.Add(Apple);
 
-
             Console.WriteLine();
             Console.WriteLine("Welcome to the Zoo of Dinosaurs");
             Console.WriteLine();
 
-
             var userHasQuitApp = false;
 
             while (userHasQuitApp == false)
-
             {
                 Console.WriteLine("Please select an option from the following choices:");
 
@@ -108,7 +106,6 @@ namespace JurassicPark
 
                 Console.WriteLine("(Q)uit the Application.");
 
-
                 var choice = PromptForString("Choice:");
 
                 if (choice == "V")
@@ -117,7 +114,6 @@ namespace JurassicPark
 
                     foreach (var dinosaur in listOfDinosaurs)
                     {
-
                         var orderDinosaursByTime = listOfDinosaurs.OrderBy(dinosaurs => dinosaurs.WhenAcquired);
                         var description = dinosaur.Description();
 
@@ -141,6 +137,7 @@ namespace JurassicPark
                         WhenAcquired = newWhenAcquired,
                         EnclosureNumber = newEnclosureNumber,
                     };
+
                     listOfDinosaurs.Add(newDinosaur);
 
                 }
@@ -175,13 +172,13 @@ namespace JurassicPark
                     }
 
                 }
+
                 if (choice == "S")
                 {
                     var typeOfDietHerbivore = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Herbivore"));
                     var typeOfDietCarnivore = listOfDinosaurs.Count(dinosaurs => dinosaurs.DietType == ("Carnivore"));
 
                     Console.WriteLine($"The number of carnivore is {typeOfDietCarnivore} and the number of herbivore is {typeOfDietHerbivore}");
-
                 }
 
                 if (choice == "T")
@@ -203,15 +200,8 @@ namespace JurassicPark
 
                         dinosaurFound.EnclosureNumber = newEnclosureNumber;
                     }
-
-
                 }
             }
-
-
-
-
-
         }
     }
 }

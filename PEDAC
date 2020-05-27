@@ -14,6 +14,40 @@ P - Problem
       - quit app
 
 E - Example
-    * | Name | dietType | WhenAcquired | weight | EnclosureNumber |
-       -----   -------    ------------   ------   ---------------
-    
+  | Name    | dietType | weight | WhenAcquired | EnclosureNumber | 
+  | ------- | -------- | ------ | ------------ | --------------- | 
+  | Ally    |carnivore | 1 ton  |              | 1               |
+  | Bob     |herbivore | 3 ton  |              | 2               | 
+  | Rock    |carnivore | 10 ton |              | 3               | 
+  | Apple   |carnivore  | 5 ton |              | 4               |
+
+D - Data
+  * list of the Dinosaurs
+    - dietType - string
+    - WhenAcquired 
+    - weight - int
+    - EnclosureNumber - string
+    - Name - string 
+
+A - Algorithm 
+  * Welcome the to the application of DINOSAURSS
+
+  * As long as user did no quit the app
+
+  *While loop*
+     - Show  menu of options 
+        * Add a Dinosaurs
+        * view a dino
+        * remove a dino
+        * transfer a dino using EnclosureNumber
+        * Summary of amount of carnivores and herbs
+ 
+  * once they decide on their decision
+    - Prompt them for their choicr
+    - execute func when choice is made.
+
+- if user quits, end app
+  * while loop comes to end *
+
+
+
