@@ -103,9 +103,9 @@ namespace JurassicPark
                 {
                     Console.WriteLine("Here is a list of the current Dinosaurs at the Zoo");
 
-                    foreach (var dinosaur in listOfDinosaurs)
+                    var orderDinosaursByTime = listOfDinosaurs.OrderBy(dinosaurs => dinosaurs.WhenAcquired);
+                    foreach (var dinosaur in orderDinosaursByTime)
                     {
-                        var orderDinosaursByTime = listOfDinosaurs.OrderBy(dinosaurs => dinosaurs.WhenAcquired);
                         var description = dinosaur.Description();
 
                         Console.WriteLine(description);
