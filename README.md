@@ -1,6 +1,6 @@
 # JurassicPark
 
-![Kapture 2020-07-02 at 16 26 29](https://user-images.githubusercontent.com/62678918/86406467-26718b80-bc81-11ea-880c-9e2c0f3a63c3.gif)
+![Kapture 2020-07-02 at 16 32 10](https://user-images.githubusercontent.com/62678918/86406728-a7c91e00-bc81-11ea-82a8-c4ef47fbc9eb.gif)
 
 A zoo application that prompts the user a menu selection and allows them to manage a zoo of dinosaurs
 
