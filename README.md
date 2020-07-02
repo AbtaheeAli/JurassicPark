@@ -2,6 +2,19 @@
 
 ![Kapture 2020-07-02 at 16 26 29](https://user-images.githubusercontent.com/62678918/86406467-26718b80-bc81-11ea-880c-9e2c0f3a63c3.gif)
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 A zoo application that prompts the user a menu selection and allows them to manage a zoo of dinosaurs
 
 A class of Dinosaurs is created to get and set the following:
