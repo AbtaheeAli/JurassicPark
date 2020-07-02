@@ -2,6 +2,8 @@
 
 ![Kapture 2020-07-02 at 16 32 10](https://user-images.githubusercontent.com/62678918/86406728-a7c91e00-bc81-11ea-82a8-c4ef47fbc9eb.gif)
 
+Languages & Technologies Used: C# & LINQ
+
 A zoo application that prompts the user a menu selection and allows them to manage a zoo of dinosaurs
 
 A class of Dinosaurs is created to get and set the following:
